@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="display-modal-btn" id="display-modal-btn">
+        Display Modal
+    </button>
+    <div class="modal-container" id="modal-container">
+        <div class="modal-box">
+            <input type="text" id="box-title-input" placeholder="Title...">
+            <textarea  id="box-text-input" placeholder="Your note goes here..." oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+        </div>
+    </div>
+    <script src="modal.js"></script>
+</body>
+</html>
