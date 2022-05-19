@@ -1,12 +1,15 @@
 * {
     box-sizing: border-box;
     overflow-x: hidden;
+    --primary-color: white;
+    --secundary-color: #2156dc;
+    --terciary-color: #eddbac;
 }
 
 .main-title {
     text-align: center;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #2E5CD1;
+    color: var(--secundary-color);
     font-size: 3rem;
 }
 .note-container {
@@ -19,7 +22,7 @@
     margin: 0.5%;
     width: 100%;
     min-height: 100px;
-    background-color: #ddd;
+    background-color: var(--terciary-color);
     word-wrap: break-word;
     padding: 1em;
     cursor:default;
@@ -28,18 +31,18 @@
     font-family: 'Courier New', Courier, monospace;
 }
 .note:hover {
-    background-color: #D1A32E;
+    background-color: var(--secundary-color);
     color: #fff;
 }
 .note-title {
-    color: #D1A32E;
+    color: #aa811b;
     transition: all 0.2s ease-in-out;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding-bottom: 0.5em;
 }
 
 .note:hover .note-title {
-    color: #333;
+    color: white;
 }
 
 .note-title, .note-text {
@@ -103,11 +106,10 @@
     z-index: 2;
 }
 .modal-box {
-    --modal-box-color: #D1A32E;
     position: fixed;
     margin-top: 0;
     padding: 2em;
-    background-color: var(--modal-box-color);
+    background-color: var(--terciary-color);
     width: 100vw;
     height: 100vh;
     overflow-y: scroll;
@@ -117,11 +119,11 @@
 
 .box-last-edit {
     text-align: right;
-    color: #fff;
+    color: black;
     font-size: 12px;
 }
 .box-creation-date {
-    color: #fff;
+    color: black;
     font-size: 12px;
 }
 

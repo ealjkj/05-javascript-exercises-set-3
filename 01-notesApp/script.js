@@ -5,6 +5,7 @@ let noteContainer = document.getElementById('note-container');
 
 let modalContainer = document.getElementById('modal-template').content.querySelector('#modal-container');
 let modalBox = modalContainer.querySelector('.modal-box');
+let modalTextarea = modalContainer.querySelector('#box-text-input'); 
 let fragment = new DocumentFragment();
 let numberId = Number(location.hash.slice(1));
 let notes = {};
@@ -33,6 +34,7 @@ addEventListener('hashchange', ()=>{
 })
 
 
+modalTextarea.addEventListener('keydown', tabToSpaces);
 
 // Functions!
 function loadEditor(title, text, lastEditDate, creationDate) {
@@ -82,6 +84,13 @@ function noteInteraction(e) {
         notes[newNoteId].lastEditDate = formatDate(today);
 
         currentNote = createNote(notes[newNoteId], Number(localStorage.currentId), noteContainer, createNoteBtn); 
+    }
+}
+
+function tabToSpaces(e) {
+    if(e.keyCode === 9) {
+        e.preventDefault();
+        modalTextarea.setRangeText('  ', modalTextarea.selectionStart, modalTextarea.selectionEnd, 'end');
     }
 }
 
